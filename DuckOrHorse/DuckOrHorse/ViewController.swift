@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  @IBOutlet weak var calculatingLabel: UILabel!
+  @IBOutlet weak var winnerLabel: UILabel!
+  @IBOutlet weak var tryLuckButton: UIButton!
+  
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,6 +25,8 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-
+  @IBAction func tryLuckButtonTapped(_ sender: Any) {
+  }
+  
 }
 

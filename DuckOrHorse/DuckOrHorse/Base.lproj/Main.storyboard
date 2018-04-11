@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +17,87 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DuckOrHorse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horse" translatesAutoresizingMaskIntoConstraints="NO" id="9qj-eO-9gC">
+                                <rect key="frame" x="67" y="9" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9qj-eO-9gC" secondAttribute="height" multiplier="15:8" id="Loc-Zx-gRE"/>
+                                    <constraint firstAttribute="height" constant="128" id="ndq-u7-IZP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw7-5e-SIH">
+                                <rect key="frame" x="156" y="163" width="62.5" height="55"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
+                                <color key="textColor" red="0.87058823529411766" green="0.91764705882352937" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duck" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-Lg-kGr">
+                                <rect key="frame" x="67" y="233" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnt-vk-NyO" userLabel="CalculatingLabel">
+                                <rect key="frame" x="-0.5" y="411" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.91764705879999997" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz6-dO-ej4" userLabel="WinnerLabel">
+                                <rect key="frame" x="-0.5" y="411" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.91764705879999997" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-eq-AqM" userLabel="TryLuckButton">
+                                <rect key="frame" x="56" y="544" width="262.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C4B-gJ-dm9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Try Your Luck">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryLuckButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTh-5d-CO3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40784313725490196" green="0.32156862745098036" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cnt-Lg-kGr" firstAttribute="width" secondItem="9qj-eO-9gC" secondAttribute="width" id="1Z0-O0-aw6"/>
+                            <constraint firstItem="cnt-Lg-kGr" firstAttribute="height" secondItem="9qj-eO-9gC" secondAttribute="height" id="21n-ce-NBE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="9qj-eO-9gC" secondAttribute="top" constant="11" id="JOP-2B-Syw"/>
+                            <constraint firstItem="rpn-eq-AqM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="MFz-zJ-3pk"/>
+                            <constraint firstItem="cnt-Lg-kGr" firstAttribute="centerX" secondItem="9qj-eO-9gC" secondAttribute="centerX" id="Q1s-kK-nlc"/>
+                            <constraint firstItem="9qj-eO-9gC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="QJb-ew-bMM"/>
+                            <constraint firstItem="rpn-eq-AqM" firstAttribute="top" secondItem="Nz6-dO-ej4" secondAttribute="bottom" constant="133" id="SBO-yN-dQx"/>
+                            <constraint firstItem="pnt-vk-NyO" firstAttribute="top" secondItem="cnt-Lg-kGr" secondAttribute="bottom" constant="50" id="Sbs-jr-lzv"/>
+                            <constraint firstItem="pnt-vk-NyO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wgn-C6-nfK"/>
+                            <constraint firstItem="Nz6-dO-ej4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aWX-4G-NcB"/>
+                            <constraint firstItem="cnt-Lg-kGr" firstAttribute="top" secondItem="iw7-5e-SIH" secondAttribute="bottom" constant="15" id="dIX-a0-9sC"/>
+                            <constraint firstItem="Nz6-dO-ej4" firstAttribute="top" secondItem="cnt-Lg-kGr" secondAttribute="bottom" constant="50" id="dZF-dV-fne"/>
+                            <constraint firstItem="iw7-5e-SIH" firstAttribute="top" secondItem="9qj-eO-9gC" secondAttribute="bottom" constant="26" id="mHc-hz-qR7"/>
+                            <constraint firstItem="pnt-vk-NyO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="muV-jM-w4p"/>
+                            <constraint firstItem="iw7-5e-SIH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oDj-7f-fh5"/>
+                            <constraint firstItem="rpn-eq-AqM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="y3h-Ax-o9h"/>
+                            <constraint firstItem="Nz6-dO-ej4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="y6e-KD-vTi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="calculatingLabel" destination="pnt-vk-NyO" id="CIQ-kV-6gQ"/>
+                        <outlet property="tryLuckButton" destination="rpn-eq-AqM" id="Py1-en-cBl"/>
+                        <outlet property="winnerLabel" destination="Nz6-dO-ej4" id="itj-cs-EH2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="duck" width="336" height="300"/>
+        <image name="horse" width="300" height="240"/>
+    </resources>
 </document>

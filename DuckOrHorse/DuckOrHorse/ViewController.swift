@@ -40,6 +40,7 @@ class ViewController: UIViewController {
   
   func startCalculations() {
     disableButton(disable: true)
+    winnerLabel.text = ""
     showCalculationText()
     timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(showCalculationText), userInfo: nil, repeats: true)
   }

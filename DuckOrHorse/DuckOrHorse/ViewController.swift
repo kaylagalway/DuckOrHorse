@@ -42,12 +42,17 @@ class ViewController: UIViewController {
     disableButton(disable: true)
     winnerLabel.text = ""
     showCalculationText()
-    timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(showCalculationText), userInfo: nil, repeats: true)
+    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(showCalculationText), userInfo: nil, repeats: true)
   }
   
   @objc func showCalculationText() {
     guard sayingCount < 4 else {
-      endGame()
+      if sayingCount == 4 {
+        calculatingLabel.text = "Winner found..."
+        sayingCount += 1
+      } else {
+        endGame()
+      }
       return
     }
     while true {

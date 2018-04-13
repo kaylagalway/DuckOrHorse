@@ -1,1 +1,0 @@
-Inspired by http://www.duckor.horse

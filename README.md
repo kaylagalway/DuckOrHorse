@@ -1,2 +1,2 @@
 # DuckOrHorse
-Duck .. or .. horse
+Inspired by and in competition with http://www.duckor.horse
